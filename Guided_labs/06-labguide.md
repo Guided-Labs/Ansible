@@ -89,7 +89,7 @@ winrm set winrm/config/service/auth '@{Basic="true"}'
          when: install_result.rc == 0
    ```
 
-   ![images](../Ansible/images/ansible-35.png)
+   ![images](images/ansible-35.png)
 
 In this section:
 - The `win_feature` module installs IIS.
@@ -112,7 +112,7 @@ To ensure IIS can be accessed, you need to add firewall rules:
            direction: in
    ```
 
-   ![images](../Ansible/images/ansible-36.png)
+   ![images](images/ansible-36.png)
 
 This rule ensures that incoming HTTP traffic is allowed on the server.
 
@@ -140,7 +140,7 @@ We will now replace the default IIS welcome page with a simple "Hello World" HTM
    </html>
    ```
 
-   ![images](../Ansible/images/ansible-38.png)   
+   ![images](images/ansible-38.png)   
 
 3. Add a task in the playbook to copy this file to the target Windows machine:
 
@@ -151,7 +151,7 @@ We will now replace the default IIS welcome page with a simple "Hello World" HTM
            dest: C:\inetpub\wwwroot\index.html      # IIS web root in Windows
    ```
 
-   ![images](../Ansible/images/ansible-37.png)
+   ![images](images/ansible-37.png)
 
 This task replaces the default IIS homepage with your custom "Hello World" page.
 
@@ -206,7 +206,7 @@ Run the playbook using the following command:
 ansible-playbook deploy_web_server.yml
 ```
 
-![images](../Ansible/images/ansible-39.png)
+![images](images/ansible-39.png)
 
 ### Step 2: Provide Vault Password (if using)
 
@@ -216,7 +216,7 @@ If you are using Ansible Vault to manage sensitive data (e.g., passwords for con
 ansible-playbook deploy_web_server.yml --ask-vault-pass
 ```
 
-![images](../Ansible/images/ansible-40.png)
+![images](images/ansible-40.png)
 
 ---
 
@@ -233,7 +233,7 @@ After the playbook execution, verify that the IIS service is running on the targ
    Get-Service W3SVC
    ```
 
-   ![images](../Ansible/images/ansible-41.png)
+   ![images](images/ansible-41.png)
 
 This command will display the status of the IIS service (W3SVC). Ensure that it is running.
 
@@ -244,7 +244,7 @@ To verify that the web server is running and accessible:
 1. Open a web browser.
 2. Navigate to `http://<target-machine-ip>`.
 
-![images](../Ansible/images/ansible-42.png)
+![images](images/ansible-42.png)
 
 If the deployment was successful, you should see either the default IIS welcome page or your custom page (if you deployed one).
 

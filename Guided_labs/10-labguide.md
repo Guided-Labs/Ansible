@@ -74,7 +74,7 @@ Completion of all previous lab guides (up to Lab Guide-09) is required before pr
    ansible_winrm_server_cert_validation=ignore
    ```
 
-   ![images](../Ansible/images/ansible-57.png)
+   ![images](images/ansible-57.png)
 
 3. **Create Group Variables**:
 
@@ -94,7 +94,7 @@ Completion of all previous lab guides (up to Lab Guide-09) is required before pr
    app_directory: "/var/www/html/{{ app_name }}"
    ```
 
-   ![images](../Ansible/images/ansible-58.png)
+   ![images](images/ansible-58.png)
 
 ### Step 2: Create Playbooks for CI/CD Tasks
 
@@ -127,7 +127,7 @@ Completion of all previous lab guides (up to Lab Guide-09) is required before pr
            ignore_dependencies: yes
    ```
 
-   ![images](../Ansible/images/ansible-60.png)
+   ![images](images/ansible-60.png)
 
 2. **Create `deploy_application.yml` Playbook**:
 
@@ -175,11 +175,11 @@ Completion of all previous lab guides (up to Lab Guide-09) is required before pr
    ansible-playbook -i inventory.ini configure_web_server.yml
    ```
 
-   ![images](../Ansible/images/ansible-59.png)
+   ![images](images/ansible-59.png)
 
-   ![images](../Ansible/images/ansible-61.png)
+   ![images](images/ansible-61.png)
 
-   ![images](../Ansible/images/ansible-62.png)
+   ![images](images/ansible-62.png)
 
 ---
 
@@ -192,7 +192,7 @@ Completion of all previous lab guides (up to Lab Guide-09) is required before pr
    http://<ip-address>
    ```
 
-   ![images](../Ansible/images/ansible-63.png)
+   ![images](images/ansible-63.png)
 
    You should see a "Hello World!" message if the deployment was successful.
 

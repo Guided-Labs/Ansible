@@ -60,7 +60,7 @@ The Ansible playbook will contain the steps required to install Chocolatey on th
    cd ~/ansible_playbooks
    ```
 
-   ![images](../Ansible/images/ansible-14.png)
+   ![images](images/ansible-14.png)
 
 2. Create a new file named `install_chocolatey.yml`:
    ```bash
@@ -80,7 +80,7 @@ The Ansible playbook will contain the steps required to install Chocolatey on th
            state: present
    ```
 
-   ![images](../Ansible/images/ansible-13.png)
+   ![images](images/ansible-13.png)
 
    This playbook does the following:
    - **name**: Describes the task ("Install Chocolatey on Windows").
@@ -115,7 +115,7 @@ PLAY RECAP *********************************************************************
 <ip-address>                  : ok=1    changed=0    unreachable=0    failed=0
 ```
 
-![images](../Ansible/images/ansible-15.png)
+![images](images/ansible-15.png)
 
 The `ok=1` indicates that the task has successfully executed without making changes since Chocolatey may already be present. If the playbook installs Chocolatey for the first time, `changed=1` will appear instead.
 
@@ -135,7 +135,7 @@ After running the playbook, verify that Chocolatey was installed successfully on
    choco --version
    ```
 
-   ![images](../Ansible/images/ansible-16.png)
+   ![images](images/ansible-16.png)
 
    If Chocolatey was installed successfully, the version number will be displayed.
 

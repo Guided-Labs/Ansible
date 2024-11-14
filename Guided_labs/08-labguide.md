@@ -67,7 +67,7 @@ Completion of all previous lab guides (up to Lab Guide-07) is required before pr
    192.168.0.202
    ```
 
-   ![images](../Ansible/images/ansible-48.png)
+   ![images](images/ansible-48.png)
 
    This file defines two groups: `windows` and `database_servers`.
 
@@ -99,7 +99,7 @@ You can further define variables specific to each group in the same inventory fi
    db_port=5432
    ```
 
-   ![images](../Ansible/images/ansible-49.png)
+   ![images](images/ansible-49.png)
 
    Here, `web_port` and `db_port` are example variables defined for the respective groups.
 
@@ -128,7 +128,7 @@ You can further define variables specific to each group in the same inventory fi
            state: present
    ```
 
-   ![images](../Ansible/images/ansible-50.png)
+   ![images](images/ansible-50.png)
 
    This playbook targets the hosts defined under the `windows` group in the inventory file.
 
@@ -142,7 +142,7 @@ Once you have defined your inventory and playbook, you can verify your setup by 
 ansible windows -i inventory.ini -m win_ping
 ```
 
-![images](../Ansible/images/ansible-51.png)
+![images](images/ansible-51.png)
 
 You should receive a `pong` response from each of your managed hosts if everything is set up correctly.
 

@@ -81,7 +81,7 @@ Completion of all previous lab guides (up to Lab Guide-08) is required before pr
    exit 0
    ```
 
-   ![image](../Ansible/images/ansible-52.png)
+   ![image](images/ansible-52.png)
 
    This script takes two parameters: the content to write to the file and the file path where it should be created.
 
@@ -93,7 +93,7 @@ Completion of all previous lab guides (up to Lab Guide-08) is required before pr
    chmod +x my_custom_module.sh
    ```
 
-   ![image](../Ansible/images/ansible-53.png)
+   ![image](images/ansible-53.png)
 
 ---
 
@@ -123,7 +123,7 @@ Completion of all previous lab guides (up to Lab Guide-08) is required before pr
            var: result.stdout
    ```
 
-   ![image](../Ansible/images/ansible-54.png)
+   ![image](images/ansible-54.png)
 
    This playbook will execute the custom module to create a file with the specified content.
 
@@ -139,7 +139,7 @@ Completion of all previous lab guides (up to Lab Guide-08) is required before pr
    ansible-playbook use_custom_module.yml
    ```
 
-   ![image](../Ansible/images/ansible-55.png)
+   ![image](images/ansible-55.png)
 
    You should see output indicating that the file was created successfully.
 
@@ -154,7 +154,7 @@ Completion of all previous lab guides (up to Lab Guide-08) is required before pr
    cat /tmp/hello_world.txt
    ```
 
-   ![image](../Ansible/images/ansible-56.png)
+   ![image](images/ansible-56.png)
 
    You should see "Hello, World!" in the output if the module executed successfully.
 

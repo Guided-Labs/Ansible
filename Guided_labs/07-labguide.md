@@ -57,7 +57,7 @@ Completion of all previous lab guides (up to Lab Guide-06) is required before pr
    ansible-galaxy role install oatakan.chocolatey_package_localize
    ```
 
-   ![image](../Ansible/images/ansible-43.png)
+   ![image](images/ansible-43.png)
 
    This will install the role in the default roles directory (`~/.ansible/roles`).
 
@@ -68,7 +68,7 @@ Completion of all previous lab guides (up to Lab Guide-06) is required before pr
    ansible-galaxy list
    ```
 
-   ![image](../Ansible/images/ansible-44.png)
+   ![image](images/ansible-44.png)
 
    You should see the newly installed role (`oatakan.chocolatey_package_localize`) in the list.
 
@@ -96,7 +96,7 @@ Now that the role is installed, you can use it in your playbooks.
            name: oatakan.chocolatey_package_localize
    ```
 
-   ![image](../Ansible/images/ansible-45.png)
+   ![image](images/ansible-45.png)
 
    This playbook will use the Chocolatey role to install the Chocolatey package manager on the target Windows machine.
 
@@ -110,7 +110,7 @@ Once the playbook is ready, you can run it using the `ansible-playbook` command.
 ansible-playbook install_chocolatey.yml
 ```
 
-![image](../Ansible/images/ansible-46.png)
+![image](images/ansible-46.png)
 
 ---
 
@@ -122,7 +122,7 @@ Once the playbook has been executed, you can verify that Chocolatey is installed
 choco --version
 ```
 
-![image](../Ansible/images/ansible-47.png)
+![image](images/ansible-47.png)
 
 You should see the version number of Chocolatey if the installation was successful.
 

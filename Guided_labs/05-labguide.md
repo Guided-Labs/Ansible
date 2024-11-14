@@ -57,7 +57,7 @@ ansible-vault create secrets.yml
 
 Add `new password` for your vault
 
-![image](../Ansible/images/ansible-32.png)
+![image](images/ansible-32.png)
 
 This command will open a text editor. You can add your sensitive data in YAML format, for example:
 
@@ -100,7 +100,7 @@ nano deploy_app.yml
         echo "API Key: {{ api_key }}"
 ```
 
-![image](../Ansible/images/ansible-33.png)
+![image](images/ansible-33.png)
 
 In this example, the `vars_files` directive is used to include the encrypted `secrets.yml` file.
 
@@ -148,7 +148,7 @@ When executing the playbook, you can prompt for the Vault password:
 ansible-playbook deploy_app.yml --ask-vault-pass
 ```
 
-![image](../Ansible/images/ansible-34.png)
+![image](images/ansible-34.png)
 
 ---
 

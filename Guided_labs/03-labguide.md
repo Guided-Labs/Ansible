@@ -61,7 +61,7 @@ We will begin by writing a playbook that copies static configuration files from 
    cd ~/ansible_config_files
    ```
 
-   ![images](../Ansible/images/ansible-17.png)
+   ![images](images/ansible-17.png)
 
 2. Create a sample configuration file named `app.conf`:
 
@@ -77,7 +77,7 @@ We will begin by writing a playbook that copies static configuration files from 
    debug = false
    ```
 
-   ![images](../Ansible/images/ansible-18.png)
+   ![images](images/ansible-18.png)
 
 ### Step 2: Write the Playbook to Copy Configuration Files
 
@@ -104,7 +104,7 @@ We will begin by writing a playbook that copies static configuration files from 
            dest: C:\ProgramData\app\app.conf
    ```
 
-   ![images](../Ansible/images/ansible-19.png)
+   ![images](images/ansible-19.png)
 
    This playbook does the following:
    - **name**: Describes the task ("Copy Configuration File to Remote Servers").
@@ -134,7 +134,7 @@ Sometimes, configuration files need to contain dynamic values that vary between 
    debug = {{ debug }}
    ```
 
-   ![images](../Ansible/images/ansible-20.png)
+   ![images](images/ansible-20.png)
 
    This template allows for dynamic insertion of values for the `environment` and `debug` fields.
 
@@ -163,7 +163,7 @@ Sometimes, configuration files need to contain dynamic values that vary between 
            dest: C:\ProgramData\app\app.conf
    ```
 
-   ![images](../Ansible/images/ansible-21.png)
+   ![images](images/ansible-21.png)
 
    This playbook does the following:
    - **name**: Describes the task ("Deploy Config File from Template").
@@ -195,9 +195,9 @@ ansible-playbook template_config.yml
 
 After running the playbook, you should see output similar to the following, indicating that Ansible has connected to the remote servers and executed the tasks:
 
-![images](../Ansible/images/ansible-22.png)
+![images](images/ansible-22.png)
 
-![images](../Ansible/images/ansible-23.png)
+![images](images/ansible-23.png)
 
 The `ok=1` indicates that the task has successfully executed. If the configuration file was changed or copied, `changed=1` will appear instead.
 
@@ -217,7 +217,7 @@ To verify that the configuration files have been successfully copied or modified
    type C:\ProgramData\app\app.conf
    ```
 
-   ![images](../Ansible/images/ansible-24.png)
+   ![images](images/ansible-24.png)
 
    The output should match the content from the source file or template.
 

@@ -105,7 +105,7 @@ web_server/
      when: install_result.rc == 0
    ```
 
-   ![images](../Ansible/images/ansible-26.png)
+   ![images](images/ansible-26.png)
 
    **In this task:**
 
@@ -125,7 +125,7 @@ web_server/
    web_server_port: 80
    ```
 
-   ![images](../Ansible/images/ansible-27.png)
+   ![images](images/ansible-27.png)
 
 3. (Optional) If you have specific variables to pass, you can create `vars/main.yml` to define those.
 
@@ -152,7 +152,7 @@ Now that the role is created, we can use it in a playbook.
        - web_server
    ```
 
-   ![images](../Ansible/images/ansible-28.png)
+   ![images](images/ansible-28.png)
 
 ---
 
@@ -168,7 +168,7 @@ Run the following command to execute the `setup_web_server.yml` playbook:
 ansible-playbook setup_web_server.yml
 ```
 
-![images](../Ansible/images/ansible-29.png)
+![images](images/ansible-29.png)
 
 ### Step 2: Verify the Output
 
@@ -190,13 +190,13 @@ To verify that the web server has been installed and configured correctly:
      Get-Service w3svc
      ```
 
-   ![images](../Ansible/images/ansible-30.png)
+   ![images](images/ansible-30.png)
 
 ### Step 2: Access the Web Server
 
 Open a web browser and navigate to the server’s IP address. You should see the default page of the installed web server.
 
-![images](../Ansible/images/ansible-31.png)
+![images](images/ansible-31.png)
 
 ---
 

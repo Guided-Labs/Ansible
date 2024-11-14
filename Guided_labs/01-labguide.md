@@ -59,7 +59,7 @@ To run Ansible on a Windows machine, you need to install WSL to provide a Linux 
 
    Once WSL is installed, restart your Windows system.
 
-   ![images](../Ansible/images/ansible-1.png)
+   ![images](images/ansible-1.png)
 
 2. **Install Linux Distribution**
 
@@ -71,7 +71,7 @@ To run Ansible on a Windows machine, you need to install WSL to provide a Linux 
 
    > **Note**: During the setup, you will be asked to create a username and password for your WSL environment.
 
-   ![images](../Ansible/images/ansible-2.png)
+   ![images](images/ansible-2.png)
 
 3. **Update Linux Packages**
 
@@ -82,8 +82,8 @@ To run Ansible on a Windows machine, you need to install WSL to provide a Linux 
    sudo apt upgrade
    ```
 
-   ![images](../Ansible/images/ansible-3.png)
-   ![images](../Ansible/images/ansible-4.png)
+   ![images](images/ansible-3.png)
+   ![images](images/ansible-4.png)
 
 ---
 
@@ -96,7 +96,7 @@ Ansible requires Python to function, so you need to install both Python and PIP 
    sudo apt install python3
    ```
 
-   ![images](../Ansible/images/ansible-5.png)
+   ![images](images/ansible-5.png)
 
 2. Install PIP:
 
@@ -104,7 +104,7 @@ Ansible requires Python to function, so you need to install both Python and PIP 
    sudo apt install python3-pip
    ```
 
-   ![images](../Ansible/images/ansible-6.png)
+   ![images](images/ansible-6.png)
 
 3. Verify installation:
 
@@ -113,7 +113,7 @@ Ansible requires Python to function, so you need to install both Python and PIP 
    pip3 --version
    ```
 
-   ![images](../Ansible/images/ansible-7.png)
+   ![images](images/ansible-7.png)
 
 ---
 
@@ -127,7 +127,7 @@ After setting up Python, you can install Ansible using the following commands.
    sudo apt-add-repository --yes --update ppa:ansible/ansible
    ```
 
-   ![images](../Ansible/images/ansible-8.png)
+   ![images](images/ansible-8.png)
 
 2. Install Ansible:
 
@@ -135,7 +135,7 @@ After setting up Python, you can install Ansible using the following commands.
    sudo apt install ansible
    ```
 
-   ![images](../Ansible/images/ansible-9.png)
+   ![images](images/ansible-9.png)
 
 3. Verify the installation:
 
@@ -143,7 +143,7 @@ After setting up Python, you can install Ansible using the following commands.
    ansible --version
    ```
 
-   ![images](../Ansible/images/ansible-10.png)
+   ![images](images/ansible-10.png)
 
 ---
 
@@ -200,7 +200,7 @@ Before proceeding with Ansible configuration, ensure WinRM is configured on your
    ansible_port=5985
    ```
 
-   ![images](../Ansible/images/ansible-11.png)
+   ![images](images/ansible-11.png)
 
 ---
 
@@ -213,7 +213,7 @@ Before proceeding with Ansible configuration, ensure WinRM is configured on your
    ansible windows -m win_ping
    ```
 
-   ![images](../Ansible/images/ansible-12.png)
+   ![images](images/ansible-12.png)
 
    If successful, you will see a response confirming that the connection is established.
 
