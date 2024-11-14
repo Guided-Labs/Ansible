@@ -1,0 +1,11 @@
+---
+- name: Use Custom Module
+  hosts: localhost
+  tasks:
+    - name: Create a file with custom content
+      shell: ./my_custom_module.sh "Hello, World!" "/tmp/hello_world.txt"
+      register: result
+
+    - name: Display the result
+      debug:
+        var: result.stdout

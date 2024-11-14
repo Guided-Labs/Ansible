@@ -1,0 +1,8 @@
+---
+- name: Deploy Web Server
+  hosts: windows
+  tasks:
+    - name: Ensure Apache is installed
+      win_feature:
+        name: Web-Server
+        state: present

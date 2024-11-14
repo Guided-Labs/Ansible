@@ -1,0 +1,11 @@
+---
+- name: Deploy Config File from Template
+  hosts: windows
+  vars:
+    env: production
+    debug: false
+  tasks:
+    - name: Deploy app.conf from template
+      win_template:
+        src: /home/<your_username>/ansible_config_files/app.conf.j2
+        dest: C:\ProgramData\app\app.conf

@@ -1,0 +1,28 @@
+---
+- name: Deploy IIS Web Server on Windows
+  hosts: windows
+  tasks:
+    - name: Install IIS using DISM 
+      win_shell: | 
+        DISM /Online /Enable-Feature /FeatureName:IIS-WebServer /All 
+      register: install_result
+
+    - name: Ensure IIS service is running
+      win_service:
+        name: W3SVC
+        state: started
+      when: install_result.rc == 0
+
+    - name: Open port 80 for HTTP
+      win_firewall_rule:
+        name: "Allow HTTP"
+        enable: yes
+        localport: '80'
+        protocol: TCP
+        action: allow
+        direction: in
+
+    - name: Copy custom Hello World HTML file to IIS
+      win_copy:
+        src: ./index.html # make sure your file is in runnning directory
+        dest: C:\inetpub\wwwroot\index.html

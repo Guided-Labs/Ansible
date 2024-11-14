@@ -1,0 +1,5 @@
+---
+- name: Setup Web Server
+  hosts: windows  # Change this to your target host group
+  roles:
+    - web_server

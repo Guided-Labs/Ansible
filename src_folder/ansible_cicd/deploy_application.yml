@@ -1,0 +1,13 @@
+---
+- name: Deploy Application
+  hosts: web_servers
+  tasks:
+    - name: Create application directory
+      win_file:
+        path: "{{ app_directory }}"
+        state: directory
+
+    - name: Copy HTML file
+      win_copy:
+        content: "<html><body><h1>Hello World!</h1></body></html>"
+        dest: "{{ app_directory }}/index.html"

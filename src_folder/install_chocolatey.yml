@@ -1,0 +1,7 @@
+---
+- name: Install Chocolatey using Ansible Galaxy Role
+  hosts: windows
+  tasks:
+    - name: Install Chocolatey
+      include_role:
+        name: oatakan.chocolatey_package_localize

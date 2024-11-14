@@ -1,0 +1,11 @@
+---
+- name: Install IIS using DISM
+  win_shell: |
+    DISM /Online /Enable-Feature /FeatureName:IIS-WebServer /All
+  register: install_result
+
+- name: Ensure IIS service is running
+  win_service:
+    name: W3SVC
+    state: started  # Change 'running' to 'started'
+  when: install_result.rc == 0

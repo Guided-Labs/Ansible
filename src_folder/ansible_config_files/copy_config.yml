@@ -1,0 +1,13 @@
+---
+- name: Copy Configuration File to Remote Servers
+  hosts: windows
+  tasks:
+    - name: Ensure the destination directory exists
+      win_file:
+        path: C:\ProgramData\app
+        state: directory
+
+    - name: Copy app.conf to remote server
+      win_copy:
+        src: /home/user1/ansible_config_files/app.conf
+        dest: C:\ProgramData\app\app.conf

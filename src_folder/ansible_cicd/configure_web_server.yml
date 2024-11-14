@@ -1,0 +1,12 @@
+---
+- name: Configure Web Server
+  hosts: web_servers
+  tasks:
+    - name: Open port 80 for HTTP traffic
+      win_firewall_rule:
+        name: "Allow HTTP"
+        enable: yes
+        localport: '80'
+        protocol: TCP
+        action: allow
+        direction: in

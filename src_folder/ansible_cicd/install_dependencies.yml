@@ -1,0 +1,24 @@
+---
+- name: Install Dependencies
+  hosts: web_servers
+  tasks:
+    - name: Ensure Chocolatey is installed
+      win_chocolatey:
+        name: chocolatey
+        state: present
+
+    - name: Install OpenSSL
+      win_chocolatey:
+        name: openssl
+        state: present
+
+    - name: Install Visual C++ Redistributable
+      win_chocolatey:
+        name: vcredist2015
+        state: present
+
+    - name: Install required packages
+      win_chocolatey:
+        name: git
+        state: present
+        ignore_dependencies: yes

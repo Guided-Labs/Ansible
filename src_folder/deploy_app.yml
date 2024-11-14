@@ -1,0 +1,11 @@
+---
+- name: Deploy Application
+  hosts: windows
+  vars_files:
+    - secrets.yml  # Include the Vault file
+  tasks:
+    - name: Ensure application is deployed
+      win_shell: |
+        echo "Deploying application with the following credentials:"
+        echo "DB Password: {{ db_password }}"
+        echo "API Key: {{ api_key }}"
